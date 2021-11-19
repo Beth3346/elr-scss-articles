@@ -1,9 +1,11 @@
 @import "elr-scss-functions/src/main";
 
-@mixin elr-mixin($config: ()) {
+@mixin elr-article($config: ()) {
   $config: extend(
     (
       color: #333,
+      font-family: "Roboto",
+      heading-font: "Roboto",
     ),
     $config
   );
