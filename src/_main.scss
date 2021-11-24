@@ -1,14 +1,117 @@
 @import "elr-scss-functions/src/main";
+@import "elr-scss-config/src/main";
 
 @mixin elr-article($config: ()) {
   $config: extend(
     (
-      color: #333,
-      font-family: "Roboto",
-      heading-font: "Roboto",
+      color: $text-color,
+      font-family: $article-font,
+      heading-font: $heading-font,
     ),
     $config
   );
 
   $color: map-get($config, color);
+  $font-family: map-get($config, font-family);
+  $heading-font: map-get($config, heading-font);
+
+  padding: $base-fontsize ($base-fontsize * 2) ($base-fontsize * 2) 0;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    padding-left: $base-fontsize;
+    padding-right: $base-fontsize;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $secondary-color;
+    font-weight: 900;
+    margin-top: $base-fontsize;
+    margin-bottom: $base-fontsize * 0.5;
+    padding: 0;
+    clear: both;
+  }
+
+  h1 {
+    font-size: $base-fontsize * 2.25;
+
+    @media (max-width: $mobile-width) {
+      font-size: $base-fontsize * 1.75;
+    }
+  }
+
+  h2 {
+    font-size: $base-fontsize * 2;
+
+    @media (max-width: $mobile-width) {
+      font-size: $base-fontsize * 1.5;
+    }
+  }
+
+  h3 {
+    font-size: $base-fontsize * 1.5;
+
+    @media (max-width: $mobile-width) {
+      font-size: $base-fontsize * 1.25;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: $base-fontsize * 0.5 0;
+    font-style: $base-fontsize;
+    line-height: 1.5;
+  }
+
+  p,
+  li {
+    font-size: $base-fontsize * 1.125;
+    color: $text-color;
+    font-family: $article-font;
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+    }
+  }
+
+  img {
+    float: left;
+    margin: $base-fontsize ($base-fontsize * 2);
+    margin-left: 0;
+    border-radius: $border-radius;
+    display: block;
+
+    &.pull-right {
+      float: right;
+      margin: $base-fontsize ($base-fontsize * 2);
+      margin-right: 0;
+    }
+
+    &.pull-center {
+      float: none;
+      margin: $base-fontsize auto;
+    }
+  }
+
+  ul,
+  ol {
+    margin-top: $base-fontsize * 1.5;
+    margin-bottom: $base-fontsize * 1.5;
+    list-style-position: inside;
+    clear: both;
+  }
+
+  h2 + ul,
+  h2 + ol,
+  h3 + ul,
+  h3 + ol {
+    margin-top: 0;
+  }
+
+  li {
+    margin: $base-fontsize * 0.75;
+    padding: 0;
+  }
 }

@@ -11,7 +11,22 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 
 ```sh
 npm install elr-scss-articles --save
+```
+
+or
+
+```sh
 yarn add elr-scss-articles
+```
+
+## Implementation
+
+### Scss
+
+```scss
+article {
+  @include elr-article;
+}
 ```
 
 ## License
