@@ -70,6 +70,7 @@
     font-size: $base-fontsize * 1.125;
     color: $text-color;
     font-family: $article-font;
+    line-height: 1.6;
 
     @media (max-width: $mobile-width) {
       font-size: 14px;
@@ -101,6 +102,7 @@
     margin-bottom: $base-fontsize * 1.5;
     list-style-position: inside;
     clear: both;
+    padding: 0;
   }
 
   h2 + ul,
