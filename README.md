@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-articles.svg?style=flat)](https://npmjs.com/package/elr-scss-articles)
 [![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-articles.svg)](https://github.com/Beth3346/elr-scss-articles)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3901d56-1276-4fc2-878f-ab3dd4eab42d/deploy-status)](https://app.netlify.com/sites/elr-articles/deploys)
 
 a scss mixin for articles
 
