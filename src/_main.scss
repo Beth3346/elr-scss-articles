@@ -7,6 +7,8 @@
       color: $text-color,
       font-family: $article-font,
       heading-font: $heading-font,
+      max-width: 1024px,
+      centered: false,
     ),
     $config
   );
@@ -14,9 +16,18 @@
   $color: map-get($config, color);
   $font-family: map-get($config, font-family);
   $heading-font: map-get($config, heading-font);
+  $max-width: map-get($config, max-width);
+  $centered: map-get($config, centered);
 
-  padding: $base-fontsize ($base-fontsize * 2) ($base-fontsize * 2) 0;
-  margin: 0;
+  max-width: $max-width;
+
+  @if ($centered) {
+    margin: 0 auto;
+    padding: 0 ($base-fontsize * 2);
+  } @else {
+    margin: 0;
+    padding: 0;
+  }
 
   @media (max-width: $tablet-width) {
     padding-left: $base-fontsize;
@@ -36,6 +47,11 @@
 
   h1 {
     font-size: $base-fontsize * 2.25;
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
 
     @media (max-width: $mobile-width) {
       font-size: $base-fontsize * 1.75;
